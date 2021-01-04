@@ -73,11 +73,13 @@ $(function() {
     changeTab($('#nav-bar span'), $('.item')); //视频播放页调用tab切换方法
 
     //管理员首页切换主题背景色
-    function changeBgcolor(bgcolor) {
-        $('#nav').css('backgroundColor', bgcolor);
-        // $('.left-nav .nav li').css('backgroundColor', bgcolor);
-    }
-    $('#bg-teal').on('click', function() {
-        changeBgcolor('teal');
+
+    //课程页控制课程大纲
+    $('#jichu').on('click', function() {
+        $('#dagang_jichu').css('display', 'block');
     });
+    $('#tigao').on('click', function() {
+        $('#dagang_tigao').css('display', 'block');
+    });
+
 });

@@ -1,76 +1,98 @@
-body{
-	background-color: #E5ECF5;
-}
-.course-intro{
-	height: 340px;
-	background-color:white;
-	border-top: 2px solid orange;
-	margin-top: 10px;
-	border-radius: 10px;
-}
-.course-img img{
-	width: 100%;
-	height: 300px;
-	border-radius: 10px 0 0 10px;
-}
-.course-introduce img{
-	width: 100%;
-	height: 300px;
-	border-radius: 0 10px 10px 0;
-}
-.mycourse{
-	width: 100%;
-	height: 80px;
-	margin-top: 10px;
-	border-radius: 10px;
-	padding: 15px;
-	background-color: white;
+body {
+    background-color: #E5ECF5;
 }
 
-.courses-title{
-	margin-top: 10px;
-	border-radius: 10px 10px 0 0;
-	background-color: white;
-	padding-left: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-size: 16px;
-	font-weight: 600;
+.course-intro {
+    height: 340px;
+    background-color: white;
+    border-top: 2px solid orange;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
-.courses-content{
-	background-color: white;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	padding-top: 10px;
-	padding-bottom: 10px;
+.course-img img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 0 0 10px;
 }
 
-.item{
-	display: none;
+.course-introduce img {
+    width: 100%;
+    height: 300px;
+    border-radius: 0 10px 10px 0;
 }
-.current{
-	background-color: orange;
-	color: white;
+
+.mycourse {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
 }
-.item ul{
-	padding: 0;
-	margin: 0;
+
+.courses-title {
+    margin-top: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
 }
-.item ul li{
-	list-style: none;
+
+.courses-content {
+    background-color: white;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.item ul li a{
-	display: block;
-	border-top: 1px solid #f1f1f1;
-	line-height: 40px;
-	padding-left: 15px;
+
+.item {
+    display: none;
 }
-.item ul li a:hover{
-	background-color: orange;
-	color: white;
+
+.current {
+    background-color: orange;
+    color: white;
 }
-.item ul li span{
-	border-top: 1px solid #f1f1f1;margin-top: 0px;line-height: 50px;display: block;
-	font-size: 13px;color: #666;padding-left: 10px;
+
+.item #dagang_jichu,
+#dagang_tigao {
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.item ul {
+    padding: 0;
+    margin: 0;
+}
+
+.item ul li {
+    list-style: none;
+}
+
+.item ul li a {
+    display: block;
+    border-top: 1px solid #f1f1f1;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.item ul li a:hover {
+    background-color: orange;
+    color: white;
+}
+
+.item ul li span {
+    border-top: 1px solid #f1f1f1;
+    margin-top: 0px;
+    line-height: 50px;
+    display: block;
+    font-size: 13px;
+    color: #666;
+    padding-left: 10px;
 }
