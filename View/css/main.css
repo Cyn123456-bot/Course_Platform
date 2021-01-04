@@ -1,0 +1,137 @@
+.side-bar .list-group-item{
+	
+}
+a:hover{
+	text-decoration: none;
+}
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+}
+.navbar-default{
+	/* background-color: #605ca8; */
+}
+
+.banner{
+	background-color: #ccc;
+	height: 300px;
+}
+
+.banner .banner-box img{
+	width: 100%;
+	height: 300px;
+}
+
+.bottom-nav {
+	height: 100px;
+	background-color: #f8f8f8;
+}
+.bottom-nav .box{
+	text-align: center;
+	line-height: 20px;
+}
+
+.bottom-nav .box i{
+	font-size: 35px;
+	line-height: 65px;
+}
+
+/* .course-intro{
+	background-color: #f8f8f8;
+} */
+
+.course-intro .title{
+	text-align: center;
+	line-height: 100px;
+}
+.course-intro .title span{
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.course-content{
+	background-color: #f8f8f8;
+	text-align: center;
+	height: 240px;
+}
+.course-content .web-intro{
+	background-color: white;
+	margin-top: 20px;
+	height: 200px;
+	width: 20%;
+	margin-left: 4%;
+	box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, .1);
+	padding-top: 30px;
+	padding-bottom: 5px;
+}
+.course-content .web-intro i{
+	font-size: 30px;
+	font-weight: 500;
+}
+.course-content .web-intro span{
+	display: block;font-size: 20px;font-weight: 600;
+}
+.course-content .web-intro p{
+	margin-top: 10px;
+	color: #666;
+}
+.course-content .web-intro img{
+	width: 100%;
+	height: 150px;
+	border-radius: 5px;
+}
+.course-content .web-intro img:hover{
+	transform: scale(1.1);
+}
+
+.course-content span{
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.course-content .title{
+	line-height: 50px;
+	text-align: right;
+}
+.author .author-intro{
+	border-right: 1px solid #ffa801;
+}
+.author .author-pic img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.bottom{
+	background-color: #666;
+	color: white;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.card{
+	width: 30%;
+	height: 250px;
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1000;
+	transform: translate(-50%,-50%);
+	border: 1px solid #f1f1f1;
+	border-radius: 10px;
+	display: none;
+	padding: 20px;
+}
+
+.onput{
+	width: 100%;
+	height: 100%;
+	background-color: #666;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.5;
+	display: none;
+}

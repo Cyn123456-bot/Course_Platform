@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/changeBg.js"></script> -->
+    <script src="js/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav style="background-color:#4a8bc2;" class="navbar navbar-default navbar-fixed-top" id="nav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header logo">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" style="color: white;" href="#">CYN-SAVIOR</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a style="color: white;" href="#">首页</a></li>
+                        <li>
+                            <a style="color: white;font-size: 15px;" id="control-left-nav" class="glyphicon glyphicon-tasks" href="#"></a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right Search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+
+                        </div>
+
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">换肤 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a id="bg-teal" href="#" style="display: inline-block;">
+                                        <div style="background-color: teal;width: 30px;height: 30px;"></div>
+                                    </a>
+                                    <a id="bg-orange" href="#" style="display: inline-block;">
+                                        <div style="background-color: orange;width: 30px;height: 30px;"></div>
+                                    </a>
+                                    <a id="bg-tomato" href="#" style="display: inline-block;">
+                                        <div style="background-color: tomato;width: 30px;height: 30px;"></div>
+                                    </a>
+                                    <a id="bg-blue" href="#" style="display: inline-block;">
+                                        <div style="background-color: #4a8bc2;width: 30px;height: 30px;"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">我的信息</a></li>
+                                <li><a href="#">修改密码</a></li>
+                                <li><a href="#">退出登录</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="nav-bottom">
+            <div class="username" style="display: inline-block;">
+                欢迎您：<span style="font-weight: 600;">cyn</span>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div class="time" style="display: inline-block;">
+                <span>现在是:</span>
+                <span id="nowtime" style="font-weight: 600;"></span>
+            </div>
+        </div>
+        <div class="left-nav col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <ul class="nav">
+                <li>用户管理
+                    <ul class="menu">
+                        <li><a href="login.html" target="right">登录</a></li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+                <li>课程资源
+                    <ul class="menu">
+                        <li><a href="UploadFile.html" target="right">视频资源</a></li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+                <li>网站管理
+                    <ul class="menu">
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+                <li>系统设置
+                    <ul class="menu">
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                        <li>二级菜单</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content col-lg-10 col-md-10 col-sm-10">
+            <div class="box">
+                <div class="current">
+                    <a href="welcome.html" id="first-page" style="text-decoration: none;" target="right" class="icon-home">&nbsp;首页&nbsp;&nbsp;/</a>
+                    <span style="font-size: 15px;font-weight:600;">当前页:</span>
+                    <a href="##" id="a_leader_txt"></a>
+                </div>
+                <iframe src="welcome.html" scrolling="auto" rameborder="0" name="right" width="100%" height="94%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            //左侧菜单展开与收起
+            $('.nav>li').click(function() {
+                $(this).children('.menu').slideToggle();
+                $(this).siblings().children('.menu').slideUp();
+            });
+            //显示当前位置的信息
+            $(".left-nav .menu a").click(function() {
+                $("#a_leader_txt").text($(this).text());
+            });
+            //点击首页后网站信息为首页
+            $(".box .current #first-page").click(function() {
+                $("#a_leader_txt").text('网站首页');
+            });
+        })
+    </script>
+    <!-- <script src="js/changeBg.js"></script> -->
+</body>
+
+</html>

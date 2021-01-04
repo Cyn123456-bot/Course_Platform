@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="View/css/login.css">
+    <link rel="stylesheet" href="View/css/bootstrap.min.css">
+    <script src="View/js/jquery.min.js"></script>
+    <script src="View/js/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <h3 style="font-weight: 600;">计算机应用基础课程资源平台</h3>
+        <div class="select">
+            <button class="btn" id="login">登录</button>
+            <button class="btn" style="top: 50%;" id="register">注册</button>
+        </div>
+    </div>
+    <div class="card login">
+        <h2>登录</h2>
+        <input type="text" name="username" id="Lusername" placeholder="username"><span class="span"></span>
+        <input type="password" name="password" id="Lpassword" placeholder="password"><span class="span" style="top: 42%;"></span>
+        <input type="text" name="code" id="Lcode" placeholder="encode"><span class="span" style="top: 58%;"></span>
+        <div onclick="Code(4)" id="code" style="font-size: 16px;color: red;line-height: 35px;" class="code">
+
+        </div>
+        <button id="login_btn" class="loginbtn">登录</button>
+        <div class="delete">
+            <a href="#">×</a>
+        </div>
+    </div>
+    <div class="card register">
+        <h2>注册</h2>
+        <input type="text" name="username" id="Rusername" placeholder="username"><span id="checkuname" style="font-size: 13px;" class="span"></span>
+        <input type="password" id="Rpassword" placeholder="password"><span class="span" style="top: 42%;font-size: 13px;"></span>
+        <input type="password" id="Rcode" placeholder="repassword"><span id="repass" class="span" style="top: 58%;font-size: 13px;"></span>
+        <button id="registerbtn" class="registerbtn">注册</button>
+        <div class="delete">
+            <a href="#">×</a>
+        </div>
+    </div>
+    <script>
+        var Rusername = document.getElementById("Rusername");
+        var Rpass = document.getElementById('Rpassword');
+        var rbtn = document.getElementById('registerbtn');
+        var repass = document.getElementById('Rcode');
+        rbtn.addEventListener('click', function() {
+            if (Rpass.value == repass.value) {
+                var newxhr = new XMLHttpRequest();
+                newxhr.open("GET", "./Controller/index.php?c=" + "adduser" + "&uname=" + Rusername.value + "&pass=" + Rpass.value, true);
+                newxhr.send(null);
+                newxhr.onreadystatechange = function() {
+                    if (newxhr.readyState == 4) {
+                        if (newxhr.status == 200) {
+                            var newres = newxhr.responseText;
+                            console.log(newres);
+                            if (newres == "error") {
+                                alert('该用户名已经被注册过了');
+                            } else {
+                                alert('注册成功');
+                                location.href = "login.html";
+                            }
+                        }
+                    }
+                }
+            } else {
+                document.getElementById('repass').innerHTML = '密码不一致';
+                document.getElementById('repass').style.color = "red";
+            }
+        })
+        window.onload = function() {
+                Code(4);
+            }
+            // 生成验证码
+        function Code(num) {
+            var str = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            var tem = '';
+            for (var i = 0; i < num; i++) {
+                tem += str.charAt(Math.floor(Math.random() * str.length));
+            }
+            document.getElementById('code').innerHTML = tem;
+        }
+        var uname = document.getElementById('Lusername');
+        var pass = document.getElementById('Lpassword');
+        var btn = document.getElementById('login_btn');
+        // 判断验证码是否正确并发送请求到后台处理登录
+        btn.onclick = function() {
+            if (document.getElementById('code').innerHTML == document.getElementById('Lcode').value) {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "./Controller/index.php?c=" + "login" + "&uname=" + uname.value + "&pass=" + pass.value, true);
+                xhr.send(null);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4) {
+                        if (xhr.status == 200) {
+                            var res = xhr.responseText;
+                            res = JSON.parse(res);
+                            // console.log(res);
+                            // 设置cookie
+                            var username = document.cookie = res.User_name;
+                            console.log(username);
+                            if (res.User_name === uname.value && res.User_pass === pass.value) {
+                                alert('欢迎您');
+                                location.href = "View/welcome.html";
+                            } else {
+                                alert('用户名或密码错误');
+                            }
+                        }
+                    }
+                }
+            } else {
+                alert('请输入正确的验证码');
+            }
+        }
+    </script>
+</body>
+
+</html>

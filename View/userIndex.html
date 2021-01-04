@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>用户首页</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jSlider.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel='stylesheet' href='css/splitting.css'>
+    <link rel='stylesheet' href='css/splitting-cells.css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+    <script src="js/jquery.jSlider.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar navbar-default hidden-xs">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="userIndex.html">计算机基础应用</a>
+                </div>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li><a href="course.html">课程</a></li>
+                <li><a href="#">资源</a></li>
+                <li><a href="#">试题</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a id="user_name" href="login.html"></a>
+                </li>
+                <li><a href="#">注册</a></li>
+            </ul>
+            <form class="navbar-form navbar-right Search hidden-xs">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="查找课程">
+                    <span class="input-group-btn">
+				            <button type="submit" class="btn btn-default">
+				                <i class="glyphicon glyphicon-search"></i>
+				            </button>
+				        </span>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- banner广告 -->
+    <div class="container-fluid banner hidden-xs">
+        <div class="row">
+            <div class="col-sm-12 banner-box" style="padding-right: 0px;padding-left: 0px;">
+                <div style="position: absolute;left: 50%;top: 50%;transform: translate(-50%,-100%);font-size: 30px;color: white">
+                    <div class="rainbow-text animated" data-splitting>让学习逐渐成为一种习惯</div>
+                </div>
+                <img src="images/banner2.png">
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <div class="container-fluid bottom-nav hidden-xs">
+        <div class="col-sm-3 box">
+            <a href="#">
+                <i class="glyphicon glyphicon-list-alt"></i>
+                <span style="display: block;">课程</span>
+            </a>
+        </div>
+        <div class="col-sm-3 box">
+            <a href="myself.html">
+                <i class="glyphicon glyphicon-user"></i>
+                <span style="display: block;">个人中心</span>
+            </a>
+        </div>
+        <div class="col-sm-3 box">
+            <a href="#">
+                <i class="glyphicon glyphicon-align-justify"></i>
+                <span style="display: block;">课件</span>
+            </a>
+        </div>
+        <div class="col-sm-3 box">
+            <a href="#">
+                <i class="glyphicon glyphicon-gift"></i>
+                <span style="display: block;">习题</span>
+            </a>
+        </div>
+    </div>
+    <!-- 网站介绍 -->
+    <div class="container-fluid course-intro hidden-xs">
+        <div class="title">
+            <span style="color: #ffa801;">网站介绍</span>
+        </div>
+    </div>
+    <div class="container-fluid course-content hidden-xs">
+        <div id="renzhi" class="col-sm-3 web-intro">
+            <a href="course.html">
+                <i class="glyphicon glyphicon-globe" style="color: 	#BBFF66;"></i>
+                <span style="display: block;font-size: 20px;font-weight: 600;color: black;">课程</span>
+                <br>
+                <p style="color: #666;">本网站包括计算机应用基础的系列课程以及相关的课程资料等</p>
+            </a>
+        </div>
+        <div id="time" class="col-sm-3 web-intro">
+            <a href="video.html">
+                <i class="glyphicon glyphicon-dashboard" style="color: #33FFDD;"></i>
+                <span style="color: black;">习题</span>
+                <br>
+                <p>每节课程后面都有对应的习题强化该节学到的基础知识</p>
+            </a>
+        </div>
+        <div id="efficiency" class="col-sm-3 web-intro">
+            <i class="glyphicon glyphicon-retweet" style="color:#5599FF;"></i>
+            <span>效率</span>
+            <br>
+            <p>让学习过的知识不再遗忘</p>
+        </div>
+        <div id="fb" class="col-sm-3 web-intro">
+            <i class="glyphicon glyphicon-send" style="color:#227700;"></i>
+            <span>方便</span>
+            <br>
+            <p>下载视频或者ppt随时可以进行观看学习</p>
+        </div>
+    </div>
+
+    <!-- 课程详情 -->
+    <div class="container-fluid course-intro hidden-xs" style="line-height: 80px;">
+        <div class="title">
+            <span style="color: #ff4f81;">课程详情</span>
+        </div>
+    </div>
+    <div class="container-fluid course-content hidden-xs" style="height: 240px;">
+        <div class="col-sm-3 web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/json_stu.png">
+                <p style="font-size: 15px;">标题</p>
+            </a>
+        </div>
+        <div class="col-sm-3 web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/json_stu.png">
+                <p style="font-size: 15px;">标题</p>
+            </a>
+        </div>
+        <div class="col-sm-3 web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/json_stu.png">
+                <p style="font-size: 15px;">标题</p>
+            </a>
+        </div>
+        <div class="col-sm-3 web-intro" style="padding-top: 20px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/xml前端.png">
+            </a>
+        </div>
+    </div>
+
+    <!-- 站长介绍 -->
+    <div class="container-fluid course-intro hidden-xs">
+        <div class="col-sm-6 title">
+            <span style="color: #5599FF;">站长介绍</span>
+        </div>
+        <div class="col-sm-6 title">
+            <span style="color: #5599FF;">备忘录</span>
+        </div>
+    </div>
+    <div class="container author hidden-xs">
+        <div class="col-sm-3 author-pic" style="height: 240px;">
+            <img src="images/touxiang.png">
+        </div>
+        <div class="col-sm-3 author-intro">
+            <span style="font-size: 20px;font-weight: 500;">金木研</span>
+            <br><br>
+            <p>归属：东京喰种</p>
+            <p>组织：青铜树</p>
+            <p>能力排行：第一</p>
+            <p>目标：如何使自己变得更强</p>
+            <p>专业技能：吸血鬼、保护爱的人</p>
+            <p>邮箱：228697@qq.com</p>
+            <p>座右铭：错的不是我是这个世界</p>
+        </div>
+        <div class="col-sm-6">
+            <h4 style="color: orange;">写下今天的学习心得吧！</h4>
+            <textarea class="form-control" rows="6" cols="10"></textarea>
+            <br>
+            <button type="button" style="width: 20%;float: right;" class="btn btn-info">保存</button>
+        </div>
+    </div>
+    <div class="bottom container-fluid hidden-xs">
+        <div class="col-sm-6">
+            <br>
+            <span style="float: right;font-weight: 600;">版权所有:</span><br>
+            <span style="float: right;font-weight: 600;">联系站长:</span><br>
+            <span style="float: right;font-weight: 600;">进站人数:</span>
+        </div>
+        <div class="col-sm-6" style="padding: 0;">
+            <br>
+            <span style="float: left;color: yellow;">cyn</span><br>
+            <span style="float: left;color: yellow;">12345678902</span><br>
+            <span style="float: left;color: yellow;">65</span>
+        </div>
+    </div>
+    <div id="card" class="card hidden-xs">
+        <h3 id="title" style="text-align: center;"></h3>
+        <p id="card-content" style="font-size: 16px;text-align: center;margin-top: 20px;"></p>
+    </div>
+    <div id="onput" class="onput hidden-xs"></div>
+
+
+
+
+    <!-- 移动端 -->
+    <!-- logo -->
+    <div class="container-fluid mobile-nav visible-xs">
+        <div class="mobile-nav-logo">
+            <a href="#">计算机应用基础</a>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="container-fluid mobile-banner visible-xs">
+        <div class="row">
+            <div class="col-xs-12 mobile-bannerbox" style="padding-right: 0px;padding-left: 0px;">
+                <div style="position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);font-size: 18px;color: white">
+                    <div class="rainbow-text animated" style="font-size: 18px;" data-splitting>让学习逐渐成为一种习惯</div>
+                </div>
+                <img src="images/banner2.png">
+            </div>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div class="container mobile-bottom-nav visible-xs">
+        <div class="col-xs-3 mobile-nav-box">
+            <a href="#">
+                <i class="glyphicon glyphicon-list-alt"></i>
+                <span style="display: block;">课程</span>
+            </a>
+        </div>
+        <div class="col-xs-3 mobile-nav-box">
+            <a href="myself.html">
+                <i class="glyphicon glyphicon-user"></i>
+                <span style="display: block;">个人中心</span>
+            </a>
+        </div>
+        <div class="col-xs-3 mobile-nav-box">
+            <a href="#">
+                <i class="glyphicon glyphicon-align-justify"></i>
+                <span style="display: block;">课件</span>
+            </a>
+        </div>
+        <div class="col-xs-3 mobile-nav-box">
+            <a href="#">
+                <i class="glyphicon glyphicon-gift"></i>
+                <span style="display: block;">习题</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 网站介绍 -->
+    <div class="container-fluid mobile-course-intro1 visible-xs">
+        <div class="title">
+            <span style="color: #ffa801;font-size: 18px;">网站介绍</span>
+        </div>
+    </div>
+    <div class="container-fluid mobile-course-content visible-xs">
+        <div id="renzhi" class="col-xs-6 mobile-web-intro">
+            <i class="glyphicon glyphicon-globe" style="color: 	#BBFF66;"></i>
+            <span style="display: block;font-size: 20px;font-weight: 600;">认知主义</span>
+            <p style="color: #666;">注重知识的认知过程</p>
+        </div>
+        <div id="time" class="col-xs-6 mobile-web-intro">
+            <i class="glyphicon glyphicon-dashboard" style="color: #33FFDD;"></i>
+            <span>时间</span>
+            <p>最大化节约学习时间</p>
+        </div>
+        <div id="efficiency" class="col-xs-6 mobile-web-intro">
+            <i class="glyphicon glyphicon-retweet" style="color:#5599FF;"></i>
+            <span>效率</span>
+            <p>让学习过的知识不再遗忘</p>
+        </div>
+        <div id="fb" class="col-xs-6 mobile-web-intro">
+            <i class="glyphicon glyphicon-send" style="color:#227700;"></i>
+            <span>方便</span>
+            <p>下载视频或者ppt随时可以进行观看学习</p>
+        </div>
+    </div>
+    <!-- 视频详情 -->
+    <div class="container-fluid mobile-course-intro1 visible-xs">
+        <div class="title">
+            <span style="color: #ff4f81;font-size: 18px;">网站视频</span>
+        </div>
+    </div>
+    <div class="container-fluid mobile-course-content visible-xs">
+        <div class="col-xs-6 mobile-web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/json_stu.png">
+                <p style="font-size: 15px;">标题</p>
+            </a>
+        </div>
+        <div class="col-xs-6 mobile-web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/json_stu.png">
+                <p style="font-size: 15px;">标题</p>
+            </a>
+        </div>
+        <div class="col-xs-6 mobile-web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/json_stu.png">
+                <p style="font-size: 15px;">标题</p>
+            </a>
+        </div>
+        <div class="col-xs-6 mobile-web-intro" style="padding-top: 10px;padding-bottom: 10px;">
+            <a href="#">
+                <img src="images/xml前端.png">
+            </a>
+        </div>
+    </div>
+    <!-- 站长介绍 -->
+    <div class="container-fluid mobile-course-intro1 visible-xs">
+        <div class="title">
+            <span style="color: #5599ff;font-size: 18px;">站长介绍</span>
+        </div>
+    </div>
+    <div class="container author visible-xs">
+        <div class="col-xs-8 mobile-author-intro">
+            <span style="font-size: 16px;font-weight: 500;">金木研</span>
+            <br><br>
+            <p>归属：东京喰种</p>
+            <p>组织：青铜树</p>
+            <p>能力排行：第一</p>
+            <p>目标：如何使自己变得更强</p>
+            <p>专业技能：吸血鬼、保护爱的人</p>
+            <p>邮箱：228697@qq.com</p>
+            <p>座右铭：错的不是我是这个世界</p>
+        </div>
+        <div class="col-xs-4 mobile-author-pic" style="width: 100px;height: 100px;float: right;padding: 0;">
+            <img src="images/touxiang.png">
+            <button type="button" style="margin-top: 5px;float: right;" class="btn btn-block btn-default">联系站长</button>
+        </div>
+    </div>
+    <div class="container-fluid mobile-nav visible-xs" style="margin-top: 20px;">
+        <div class="mobile-nav-logo">
+            <a href="#" style="font-size: 13px;color: #666;">版权所有------cyn工作室</a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var renzhi = document.getElementById('renzhi');
+        var time = document.getElementById('time');
+        var efficiency = document.getElementById('efficiency');
+        var fb = document.getElementById('fb');
+        // renzhi.addEventListener('click',function(){
+        // 	document.getElementById('onput').style.display='block';
+        // 	document.getElementById('card').style.display='block';
+        // 	document.getElementById('title').innerText='认知主义';
+        // 	document.getElementById('title').style.color='#BBFF66';
+        // 	document.getElementById('card-content').innerText='认知学派学者认为学习者透过认知过程，把各种资料加以储存及组织，形成知识结构。 认知主义源于格式塔心理学派，这个学派认为学习是人们通过感觉、知觉得到的，是由人脑主体的主观组织作用而实现的。';
+        // });
+        // time.addEventListener('click',function(){
+        // 	document.getElementById('onput').style.display='block';
+        // 	document.getElementById('card').style.display='block';
+        // 	document.getElementById('title').innerText='时间';
+        // 	document.getElementById('title').style.color='#33FFDD';
+        // 	document.getElementById('card-content').innerText='最大化节约学习的时间，充分利用时间做更多的事情，学习更多的知识';
+        // });
+        efficiency.addEventListener('click', function() {
+            document.getElementById('onput').style.display = 'block';
+            document.getElementById('card').style.display = 'block';
+            document.getElementById('title').innerText = '效率';
+            document.getElementById('title').style.color = '#5599FF';
+            document.getElementById('card-content').innerText = '提升学习效率，制定一套适合学生的学习方法，边学习边实践，充分掌握学习过的知识';
+        });
+        fb.addEventListener('click', function() {
+            document.getElementById('onput').style.display = 'block';
+            document.getElementById('card').style.display = 'block';
+            document.getElementById('title').innerText = '方便';
+            document.getElementById('title').style.color = '#227700';
+            document.getElementById('card-content').innerText = '支持电脑观看学习，可随时下载下来进行观看学习，日后推出手机端学习，实现随时随地学习。';
+        });
+        document.getElementById('card').onclick = function() {
+            this.style.display = 'none';
+            document.getElementById('onput').style.display = 'none';
+        };
+        // 文字动画
+    </script>
+    <script type="text/javascript">
+        // 读取cookie用户
+        var Username = document.getElementById('user_name');
+        Username.innerHTML = document.cookie;
+    </script>
+    <script src='js/splitting.min.js'></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

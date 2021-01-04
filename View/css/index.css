@@ -1,0 +1,155 @@
+.nav-bottom {
+    background-color: white;
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 15px;
+    color: #666;
+    line-height: 29px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.Search {
+    margin-right: 15px;
+}
+
+.container-fluid>.navbar-header {
+    margin-left: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.left-nav {
+    background-color: #505050;
+    height: 650px;
+}
+
+.left-nav .nav {
+    width: 100%;
+    list-style: none;
+    background-color: #505050;
+    z-index: 1000;
+}
+
+.left-nav .nav>li {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    color: #ccc;
+    /* border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc; */
+}
+
+.left-nav .nav>li:hover {
+    background-color: #4a8bc2;
+    color: white;
+}
+
+.left-nav .menu {
+    list-style: none;
+    width: 100%;
+    background-color: #A0A0A0;
+    display: none;
+    z-index: 1000;
+}
+
+.left-nav .menu li {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    line-height: 30px;
+    color: #666;
+}
+
+.left-nav .menu li a {
+    color: #666666;
+}
+
+.left-nav .menu li a:hover {
+    color: white;
+}
+
+.left-nav .menu li:first-child {
+    border-top: 1px solid black;
+}
+
+.left-nav .menu li:hover {
+    background-color: #AAAAAA;
+    color: white;
+}
+
+.col-lg-2,
+.col-md-2,
+.col-sm-2,
+.col-xs-2 {
+    padding: 0;
+}
+
+.col-lg-10 {
+    z-index: 1;
+}
+
+@media screen and (max-width:768px) {
+    .left-nav {
+        height: 650px;
+    }
+    .content {
+        margin-top: 590px;
+    }
+    .box .current {
+        display: none;
+    }
+}
+
+.content {
+    height: 650px;
+    background-color: #f1f1f1;
+    z-index: 1;
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+
+.content .box {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.box .current {
+    width: 100%;
+    line-height: 30px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e7e7e7;
+    /* border-top: 1px solid #ccc; */
+}
+
+.box .current a {
+    font-size: 15px;
+    color: #666;
+}
+
+.navbar-default .navbar-nav>.open>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.dropdown-menu {
+    min-width: 100px;
+}
+
+.dropdown-menu>li>a {
+    padding: 5px 8px;
+}

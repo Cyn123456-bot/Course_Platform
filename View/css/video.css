@@ -1,0 +1,69 @@
+.video-title{
+	font-size: 15px;
+	font-weight: 500;
+	margin-top: 10px;
+}
+
+.container-fluid{
+	background-color: #E5ECF5;
+}
+
+.video-course{
+	width: 100%;
+	background-color: white;
+	height: 550px;
+	margin-bottom: 20px;
+	box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, 0.1);
+}
+
+.box{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 92%;
+	background-color: white;
+	height: 550px;
+	overflow: auto;
+	position: absolute;
+	top: 30px;
+	box-shadow: 7px 7px 10px 0 rgba(76, 110, 245, 0.2);
+	border-radius: 5px;
+	border: 1px solid #F1F1F1;
+}
+.box li{
+	margin-top: 0px;
+}
+.box li a{
+	padding-left: 15px;
+	line-height: 36px;
+	display: block;
+	border-top: 1px solid #f1f1f1;
+}
+.box li a:hover{
+	background-color: orange;
+	color: white;
+}
+
+.nav-bar{
+	background-color: white;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 50px;
+}
+
+.nav-bar span{
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.item{
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	line-height: 50px;
+	display: none;
+}
+
+.current{
+	color: orange;
+}

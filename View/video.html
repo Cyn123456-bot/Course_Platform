@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>课程播放页</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/video.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="userIndex.html">计算机基础应用</a>
+                </div>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">资源</a></li>
+                <li><a href="#">试题</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">登录</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+            <form class="navbar-form navbar-right Search hidden-xs">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="查找课程">
+                    <span class="input-group-btn">
+				            <button type="submit" class="btn btn-default">
+				                <i class="glyphicon glyphicon-search"></i>
+				            </button>
+				        </span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-sm-9">
+            <div class="video-title" style="font-size: 13px;font-weight: 600;">
+                视频的标题
+            </div>
+            <div class="video-course">
+                <video width="100%">
+						<source src="myvideo.mp4" type="video/mp4"></source>
+						<source src="myvideo.ogv" type="video/ogg"></source>
+						<source src="myvideo.webm" type="video/webm"></source>
+						<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+							<param name="movie" value="myvideo.swf" />
+							<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+						</object>
+						当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+					</video>
+            </div>
+            <div class="nav-bar" id="nav-bar">
+                <span class="current" style="padding: 10px;line-height: 30px;">ppt下载</span>&nbsp;|
+                <span style="padding: 10px;">习题练习</span>
+                <div class="item" style="display: block;">
+                    <a href="#">下载该节视频的ppt</a>
+                </div>
+                <div class="item">
+                    请问css布局有什么特点？
+                    <input type="text" class="form-control" placeholder="在此处填写答案" id="" />
+                    <button type="button" class="btn">提交</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <ul class="box">
+                <li>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                    <a href="#">第一课</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

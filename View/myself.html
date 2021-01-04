@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myself.css"/>
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<div class="navbar-brand">
+						<a href="userIndex.html">计算机基础应用</a>
+					</div>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">课程</a></li>
+					<li><a href="#">资源</a></li>
+					<li><a href="#">试题</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html">登录</a></li>
+					<li><a href="#">注册</a></li>
+				</ul>
+				<form class="navbar-form navbar-right Search hidden-xs">
+				    <div class="input-group">
+				        <input type="text" class="form-control" placeholder="查找课程">
+				        <span class="input-group-btn">
+				            <button type="submit" class="btn btn-default">
+				                <i class="glyphicon glyphicon-search"></i>
+				            </button>
+				        </span>
+				    </div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="userinfo">
+						<div class="picture">
+							<img src="images/touxiang.png" >
+						</div>
+						<div class="more-userinfo">
+							<span>用户名</span>
+							<span>手机号</span>
+							<span>QQ号</span>
+							<span>登录密码</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-8">
+					<div class="userlearn">
+						<ul class="navtop" id="navtop">
+							<li>
+								<span href="#" class="current">修改资料</span>
+								<span href="#">我的评论</span>
+								<span href="#">记事本</span>
+								<span href="#">我的学习</span>
+								<span href="#">我的习题</span>
+							</li>
+						</ul>
+						
+						<!-- 修改资料 -->
+						<div class="item" style="display: block;">
+							修改资料
+						</div>
+						<div class="item">
+							评论
+						</div>
+						<div class="item">
+							记事本
+						</div>
+						<div class="item">
+							我的学习
+						</div>
+						<div class="item">
+							我的习题
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var nav=document.getElementById('navtop').querySelectorAll('span');
+			var item=document.getElementsByClassName('item');
+			for(var i=0;i<nav.length;i++){
+				nav[i].setAttribute('index',i);
+				nav[i].onclick=function(){
+					for(var i=0;i<nav.length;i++){
+						nav[i].className='';
+					}
+					this.className='current';
+					
+					var index=this.getAttribute('index');
+					for (var i = 0; i < item.length; i++) {
+					    item[i].style.display = 'none';
+					}
+					item[index].style.display = 'block';
+				}
+			}
+		</script>
+	</body>
+</html>
