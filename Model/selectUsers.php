@@ -7,7 +7,7 @@ class Users{
 	 */
 	public function getUsers(){
 		$db=new DB();
-		$sql="select * from Users;";
+		$sql="select * from User;";
 		$res=$db->fetchAll($sql);
 		return $res;
 	}
@@ -68,9 +68,9 @@ class Users{
 	 * 修改用户信息
 	 * @param $id
 	 */
-	public function upDate($id,$uname,$pass){
+	public function upDate($id,$uname,$pass,$phone,$qq){
 		$db=new DB();
-		$sql="update Users set Username='$uname',Password='$pass' where id='$id'";
+		$sql="update User set User_name='$uname',User_pass='$pass',User_phone='$phone',User_qq='$qq' where User_id='$id'";
 		$res=$db->my_query($sql);
 		return $res;
 	}

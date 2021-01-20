@@ -49,7 +49,9 @@ function upDataUser(){
 	$id=$_GET['id'];
 	$username=$_GET['uname'];
 	$password=$_GET['pass'];
-	$result=$updata->upDate($id,$username,$password);
+	$phone=$_GET['phone'];
+	$qq=$_GET['qq'];
+	$result=$updata->upDate($id,$username,$password,$phone,$qq);
 	echo json_encode($result);
 }
 /**
