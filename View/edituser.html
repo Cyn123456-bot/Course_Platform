@@ -10,11 +10,21 @@
             border: none;
             text-align: center;
         }
+        
+        th {
+            width: 10%;
+        }
+        
+        td {
+            width: 10%;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body onload="Getall()">
-    编辑用户
+    id查找：<input id="userid" type="text" style="border: 1px solid #666;"> <button id="searchbyid">查找</button> 用户名查找：
+    <input id="username" type="text" style="border: 1px solid #666;">
     <table id="container">
         <tr>
             <th>编号</th>
@@ -22,6 +32,7 @@
             <th>密码</th>
             <th>手机号</th>
             <th>QQ号</th>
+            <th>操作</th>
         </tr>
     </table>
     <script src="js/ajax.js"></script>

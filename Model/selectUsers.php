@@ -16,7 +16,7 @@ class Users{
 	 */
 	public function removeUsers($id){
 		$db=new DB();
-		$sql="delete from Users where id=$id";
+		$sql="delete from User where User_id=$id";
 		$res=$db->my_query($sql);
 		if($res){
 			return 1;
@@ -30,7 +30,7 @@ class Users{
 	 */
 	public function SelectUserById($id){
 		$db=new DB();
-		$sql="select * from Users where id='$id'";
+		$sql="select * from User where User_id='$id'";
 		$res=$db->fetchRow($sql);
 		return $res;
 	}
@@ -39,7 +39,7 @@ class Users{
 	 */
 	public function SelectUserByName($name){
 		$db=new DB();
-		$sql="select * from Users where Username like '%$name%'";
+		$sql="select * from User where User_name like '%$name%'";
 		$res=$db->fetchAll($sql);
 		return $res;
 	}
