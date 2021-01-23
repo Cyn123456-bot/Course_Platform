@@ -9,4 +9,10 @@ class Files{
 		$res=$db->my_query($sql);
 		return $res;
 	}
+	public function getVideo(){
+		$db=new DB();
+		$sql="select * from video";
+		$res=$db->fetchAll($sql);
+		return $res;
+	}
 }

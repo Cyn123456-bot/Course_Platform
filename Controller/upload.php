@@ -25,8 +25,16 @@ function addvideo(){
 		// location.href="../View/UploadFile.html";
 	}
 }
+//获取全部的视频资源
+function getvideo(){
+	$getvideo=new Files();
+	$res=$getvideo->getVideo();
+	echo json_encode($res);
+}
 if($c=='video'){
 	addvideo();
+}else if($c=='getvideo'){
+	getvideo();
 }
 
 

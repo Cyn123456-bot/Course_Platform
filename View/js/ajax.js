@@ -1,4 +1,5 @@
 /*
+用户信息的操作
 获取全部的用户信息
 */
 function Getall() {
@@ -216,3 +217,40 @@ function SearchByname() {
     });
 }
 SearchByname();
+
+/*
+对视频资源的操作如下
+*/
+
+// 获取视频数据
+function getVideo() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '../Controller/upload.php?c=' + 'getvideo', true);
+    xhr.send(null);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                var res = xhr.responseText;
+                res = JSON.parse(res);
+                // console.log(res);
+                var newHtml = document.querySelector('#container').innerHTML;
+                for (var i = 0; i < res.length; i++) {
+                    var id = res[i].video_id;
+                    var title = res[i].video_title;
+                    var intro = res[i].video_intro;
+                    var size = res[i].video_size;
+                    var name = res[i].video_name;
+                    var innerhtml =
+                        "<tr id='row'><td id='id'>" + id +
+                        "</td><td id='stuname'>" + title +
+                        "</td><td id='stupass'>" + intro +
+                        "</td><td id='stuphone'>" + size +
+                        "</td><td id='stuqq'>" + name +
+                        "</td><td><a href='#'>删除</a>&nbsp;&nbsp;<a href='#'>编辑</a>&nbsp;&nbsp;<a href='#'>播放</a></td></tr>"
+                    newHtml += innerhtml;
+                }
+                document.querySelector('#container').innerHTML = newHtml;
+            }
+        }
+    }
+}
