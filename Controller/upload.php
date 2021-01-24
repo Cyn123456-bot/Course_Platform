@@ -18,8 +18,8 @@ function addvideo(){
 	$addvideo=new Files();
 	$result=$addvideo->addVideo($title,$intro,$path,$size,$name);
 	if($result){
-		echo "<script>alert('上传成功')</script>";
-		// location.href="../View/UploadFile.html";
+		echo "<script>alert('上传成功');location.href='../View/UploadFile.html';</script>";
+		
 	}else{
 		echo "<script>alert('上传失败')</script>";
 		// location.href="../View/UploadFile.html";
